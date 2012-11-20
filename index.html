@@ -1,87 +1,86 @@
 <!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>EasyBuild</title>
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
-  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   <title>Vsc-tools</title>
   <meta name="description" content="Common tools used within our organization.">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><img alt="HPC-UGent" src="images/hpcugent_logo_small.png"></h1>
+        <h4>EasyBuild:  building software with ease.</h4>
+        <p class="view"><a href="https://github.com/hpcugent/VSC-tools">View the Project on GitHub <small>hpcugent/VSC-tools</small></a></p>
+        <ul>
+          <li><a href="https://github.com/hpcugent/VSC-tools/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/hpcugent/VSC-tools/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/hpcugent/VSC-tools">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+      <p><a href="https://github.com/hpcugent/VSC-tools">VSC-tools</a> is a set of Python libraries and scripts that are commonly used within
+      our organisation.</p>
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+<h2><a name="REQUIREMENTS">REQUIREMENTS</a></h2>
 
-</head>
+<p>VSC-tools requires <a href="http://www.python.org">Python</a> 2.4 (or a more
+recent 2.x version) to be available. For the LDAP tools, obviously, you need <a
+  href="http://python-ldap.org">python-ldap</a>.</p>
 
-<body>
+<h2><a name="Components">COMPONENTS</a></h2>
 
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Vsc-tools</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">Common tools used within our organization.</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/hpcugent/VSC-tools/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/hpcugent/VSC-tools/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/hpcugent/VSC-tools" class="code">View Vsc-tools on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <h3>Welcome to GitHub Pages.</h3>
+<p>VSC-tools consists of multiple separate packages.</p>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<h3>vsc-base</h3>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<ul>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+  <li>vsc.fancylogger: an enhanced logging tool</li>
+  <li>vsc.utils.affinity: setting cpu affinity</li>
+  <li>vsc.util.asyncprocess: allow asynchronous subprocesses to be executed</li>
+  <li>vsc.utils.cache: file-based caching of timestamped data</li>
+  <li>vsc.utils.daemon: a generic daemon class (public domain software reused from <a href="http://www.jejik.com/articles/2007/02/a_simple_unix_linux_daemon_in_python/">Sander Marechal</a></li>
+  <li>vsc.utils.dateandtime: convenience functions for dealing with times and dates</li>
+  <li>vsc.utils.generaloption: an enhanced option parser, offering three levels: configuration file, environment variables and command line options</li>
+  <li>vsc.utils.IPy: handling of IPV4 and IPV6 addresses and networks</li>
+  <li>vsc.utils.mail: convenience wrapper around standard python mail functionality</li>
+  <li>vsc.utils.missing: various useful functions and classes (e.g., monoids, monois based dictionaries, ...)</li>
+  <li>vsc.utils.nagios: tools to provide functionality for exiting with a correct status that can be read by icinga/nagios</li>
+  <li>vsc.utils.patterns: common software design patterns</li>
+  <li>vsc.utils.run: execution of command</li>
 
-<h3>Designer Templates</h3>
+</ul>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </article>
-      </div>
+      </section>
     </div>
     <footer>
-      <div class="owner">
-      <p><a href="https://github.com/hpcugent" class="avatar"><img src="https://secure.gravatar.com/avatar/b12f36a4d0f123b4b185272bf876c728?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" height="48"/></a> <a href="https://github.com/hpcugent">hpcugent</a> maintains <a href="https://github.com/hpcugent/VSC-tools">Vsc-tools</a></p>
-
-
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="http://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
+      <p>Project maintained by <a href="https://github.com/hpcugent">hpcugent</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
     </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/hpcugent/VSC-tools/tarball/master" class="tar">tar</a><a href="https://github.com/hpcugent/VSC-tools/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    <script type="text/javascript">
 
-  
-</body>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31408541-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
 </html>
